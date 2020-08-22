@@ -1,6 +1,8 @@
 <h1>Welcome <%= @user.name %></h1>
 
-<%= link_to "Discover Movies", '/movies' %>
+<section id="discover-movies">
+<%= button_to "Discover Movies", discover_index_path, method: :get %>
+</section>
 
 <section id="friends">
   Yo Friends
