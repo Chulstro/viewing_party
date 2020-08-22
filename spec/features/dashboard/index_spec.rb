@@ -16,7 +16,7 @@ RSpec.describe 'As a user visiting the dashboard' do
   it "has a main screen and links" do
     expect(current_path).to eq("/dashboard")
     expect(page).to have_content("Welcome #{@user}")
-    expect(page).to have_link("Discover Movies")
+    expect(page).to have_button "Discover Movies"
     within "#friends" do
       expect(page).to have_content("Yo Friends")
     end
