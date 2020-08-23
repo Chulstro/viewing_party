@@ -6,6 +6,21 @@
 
 <section id="friends">
   Yo Friends
+  Add Friend by Email
+  <%= form_tag '/friends', method: :create do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+
+    <%= submit_tag "Add Friend" %>
+  <% end %>
+
+  <% if @user.friends.empty? %>
+    <p>You currently have no friends</p>
+  <% else %>
+    <% @user.friends.each do |friend| %>
+      <%= friend.name %>
+    <% end %>
+  <% end %>
 </section>
 
 <section id="viewing-parties">

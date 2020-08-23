@@ -2,13 +2,7 @@ require "rails_helper"
 
 RSpec.describe 'As a user visiting the dashboard' do
   before :each do
-    OmniAuth.config.test_mode = true
-
-    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-    :provider => 'google',
-    :uid => "#{ENV['GOOGLE_CLIENT_ID']}"
-    })
-
+    stub_auth
     visit '/'
     click_on "Login with Google"
   end
