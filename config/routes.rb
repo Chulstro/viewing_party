@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index'
 
   resources :discover, only: :index
+  resources :movies, only: [:show, :index]
 end
