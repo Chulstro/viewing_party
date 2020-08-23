@@ -61,16 +61,23 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
-      with.test_framework :rspec
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
 
-      with.library :rails
-    end
+    with.library :rails
   end
 end
 
 def stub_auth
+  OmniAuth.config.test_mode = true
+
+  OmniAuth.config.mock_auth[:google_oath2] = OmniAuth::AuthHash.new({
+  :provider => 'google_oath2',
+  :uid => "#{ENV['GOOGLE_CLIENT_ID']}",
+  :info => {name: "Example User", email: "student@example.com"}
+  })
 
 end
