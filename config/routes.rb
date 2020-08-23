@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index'
 
   post '/friends', to: 'friends#create'
+  
+  resources :discover, only: :index
 end
