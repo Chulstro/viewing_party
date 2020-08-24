@@ -19,6 +19,7 @@ gem 'omniauth-google-oauth2'
 gem 'faraday'
 gem 'figaro'
 gem 'bootstrap'
+gem "autoprefixer-rails"
 
 group :development, :test do
   gem 'pry'
