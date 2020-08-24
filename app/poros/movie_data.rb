@@ -43,7 +43,7 @@ class MovieData
     TheMovieDBService.new.toprated
   end
 
-  def self.top_20_movies_by_rating
-    top_rated_movies[:results].first(20)
+  def self.top_40_movies_by_rating
+    top_rated_movies[:results].first(40)
   end
 end
