@@ -1,11 +1,14 @@
 <h1>Discover Movies</h1>
 
 <section id="find-top-rated-movies">
+
   <%= button_to "Find Top Rated Movies","/movies?q=toprated", method: :get %>
+
 </section>
 
 <br/>
 <section id="find-movies">
+
   <%= form_tag '/movies', method: :get do %>
     <%= label_tag "movie-title", "Search by title of movie" %><br/>
     <%= text_field_tag "movie-title" %><br/>
