@@ -18,11 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'omniauth-google-oauth2'
 gem 'faraday'
 gem 'figaro'
-<<<<<<< HEAD
 gem 'bootstrap'
-=======
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
->>>>>>> d280ebd780d8f4f08b2f3e90e472bf115a14bf91
 
 group :development, :test do
   gem 'pry'
@@ -42,3 +38,4 @@ group :test do
   gem 'simplecov'
   gem 'shoulda-matchers'
 end
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
