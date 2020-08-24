@@ -15,6 +15,15 @@ ActiveRecord::Schema.define(version: 2020_08_21_135746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "authorizations", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_authorizations_on_user_id"
+  end
+
   create_table "friends", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "friend_id"
@@ -30,5 +39,6 @@ ActiveRecord::Schema.define(version: 2020_08_21_135746) do
     t.string "email"
   end
 
+  add_foreign_key "authorizations", "users"
   add_foreign_key "friends", "users"
 end
