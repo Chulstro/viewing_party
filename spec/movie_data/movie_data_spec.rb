@@ -13,7 +13,7 @@ RSpec.describe MovieData do
   end
 
   it 'can get the top 20 rated movies' do
-    data = MovieData.top_20_movies_by_rating
+    data = MovieData.top_40_movies_by_rating
     expect(data.class).to eq(Array)
     expect(data.size).to eq(20)
     expect(data.first[:title]).to eq('Gabriel\'s Inferno Part II')
