@@ -16,9 +16,11 @@
     <% if @movie_details.empty? %>
       <h3> No movies match your search request. Please try again.</h3>
     <% else %>
-      <% @movie_details.each do |movie| %>
+      <% @movie_details.each_with_index do |movie, index| %>
+      <section id= <%= index %> >
         <p><%= link_to movie[:title], "/movies/#{movie[:id]}" %></p>
         <p>Vote Average: <%= movie[:vote_average] %></p>
+      </section>
       <% end %>
     <% end %>
   </section>
