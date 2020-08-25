@@ -37,7 +37,7 @@ class Movie
   end
 
   def genres
-    genres_hash =[]
+    genres_hash = []
     @genres_data.each do |genre|
       genres_hash << Genre.new(genre)
     end

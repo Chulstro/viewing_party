@@ -1,7 +1,10 @@
 class MoviesController < ApplicationController
   def index
-    @movie_details = MovieData.search_results(params[:search]) if params[:search].nil? == false
-    return @movie_details = MovieData.top_20_rated_movies if params[:q]
+    if params[:search].nil? == false
+      @movie_details = MovieData.search_results(params[:search])
+    else params[:q].nil? == false
+      @movie_details = MovieData.top_40_movies_by_rating
+    end
   end
 
   def show
