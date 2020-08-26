@@ -4,10 +4,11 @@ class Movie
               :runtime,
               :summary,
               :cast,
-              :reviews,
-              :vote_average
+              :vote_average,
+              :movie_id
 
-  def initialize(data)
+
+  def initialize(data, id)
     @title = data[:title]
     @genres = data[:genres]
     @runtime = data[:runtime]
@@ -15,6 +16,7 @@ class Movie
     @cast = data[:cast]
     @reviews = data[:reviews]
     @vote_average = data[:vote_average]
+    @movie_id = id
   end
 
   def first_10_cast

@@ -6,4 +6,9 @@ class MoviesController < ApplicationController
          @movie_details = MovieData.top_40_movies_by_rating
     end
   end
+
+  def show
+    movie_info = MovieData.all_movie_att(params[:id])
+    @movie = Movie.new(movie_info, params[:id])
+  end
 end
