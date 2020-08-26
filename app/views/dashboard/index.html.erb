@@ -26,3 +26,15 @@
 <section id="viewing-parties">
   Yo Partays
 </section>
+
+<section id="events">
+  if
+  <h2>Events</h2><br>
+  <% @user.view_parties.each do |party| %>
+    <%= party.duration %>
+    <%= party.find_movie_title %>
+    <% party.all_invited.each do |attendee| %>
+      <%= attendee.name %>
+    <% end %>
+  <% end %>
+</section>
