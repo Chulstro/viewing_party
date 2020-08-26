@@ -1,0 +1,47 @@
+{
+    "page": 1,
+    "total_results": 2,
+    "total_pages": 1,
+    "results": [
+        {
+            "popularity": 17.436,
+            "vote_count": 2686,
+            "video": false,
+            "poster_path": "/zgwRTYWEEPivTwjB9S03HtmMcbM.jpg",
+            "id": 10196,
+            "adult": false,
+            "backdrop_path": "/msU3F9DVNFvCsQVxhxliyWSO03D.jpg",
+            "original_language": "en",
+            "original_title": "The Last Airbender",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "title": "The Last Airbender",
+            "vote_average": 4.7,
+            "overview": "The story follows the adventures of Aang, a young successor to a long line of Avatars, who must put his childhood ways aside and stop the Fire Nation from enslaving the Water, Earth and Air nations.",
+            "release_date": "2010-06-30"
+        },
+        {
+            "popularity": 1.4,
+            "id": 685621,
+            "video": false,
+            "vote_count": 2,
+            "vote_average": 10,
+            "title": "The Last Airbender: Origins of the Avatar",
+            "release_date": "2010-11-16",
+            "original_language": "en",
+            "original_title": "The Last Airbender: Origins of the Avatar",
+            "genre_ids": [
+                99,
+                878,
+                12
+            ],
+            "backdrop_path": null,
+            "adult": false,
+            "overview": "Creators Michael DiMartino and Bryan Konietzko, who explain the backstory of their project and how martial arts informed the cartoon world and the eccentric characters.",
+            "poster_path": "/yJYqiIUScivR7BStmYZ6LbCZPy4.jpg"
+        }
+    ]
+}

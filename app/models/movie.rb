@@ -10,11 +10,11 @@ class Movie
 
   def initialize(data, id)
     @title = data[:title]
-    @genres = data[:genres]
+    @genres_data = data[:genres]
     @runtime = data[:runtime]
     @summary = data[:summary]
     @cast = data[:cast]
-    @reviews = data[:reviews]
+    @reviews_data = data[:reviews]
     @vote_average = data[:vote_average]
     @movie_id = id
   end
@@ -28,6 +28,22 @@ class Movie
   end
 
   def reviews_count
-    @reviews.size
+    @reviews_data.size
+  end
+
+  def reviews
+    review_hash = []
+    @reviews_data.each do |review|
+      review_hash << Review.new(review)
+    end
+    review_hash
+  end
+
+  def genres
+    genres_hash = []
+    @genres_data.each do |genre|
+      genres_hash << Genre.new(genre)
+    end
+    genres_hash
   end
 end
