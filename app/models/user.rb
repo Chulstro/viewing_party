@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :authorizations
+  has_many :view_parties
   has_many :user_friends, class_name: 'Friend'
   has_many :friends, through: :user_friends, source: :friend
 
