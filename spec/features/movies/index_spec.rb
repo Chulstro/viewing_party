@@ -11,6 +11,18 @@ RSpec.describe 'Movies index page' do
     end
   end
 
+  it "I can click the Find Top Rated Movies button to see the current 40 top rated movies" do
+    visit '/movies'
+    click_on 'Find Top Rated Movies'
+
+    within '#movie-search-results' do
+      expect(page).to have_content("Gabriel's Inferno Part II")
+      expect(page).to have_content("Vote Average: 9.1")
+      expect(page).to have_content("Gabriel's Inferno")
+      expect(page).to have_content("Vote Average: 9")
+    end
+  end
+
   it "I see a text field with a 'Find Movies' button" do
     within "#find-movies" do
       expect(page.has_field? :search).to be_truthy
