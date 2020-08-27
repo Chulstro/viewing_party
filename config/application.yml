@@ -1,0 +1,12 @@
+# Add configuration values here, as shown below.
+#
+GOOGLE_CLIENT_ID: 1013557213375-du6328pv6q6olqe2f60rsu3hqav28061.apps.googleusercontent.com
+GOOGLE_KEY: AIzaSyCzJ0JMlffXAtO_ld5wJuAwZ8f_PldQXzU
+GOOGLE_CLIENT_SECRET: xSxv5PldQJqY-6FbhaHdTv7g
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+MOVIE_API: 24a1f8cb11ec9c3de2cbd2595dbcb6a6
