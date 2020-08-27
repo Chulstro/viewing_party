@@ -16,12 +16,11 @@ class MovieData
 
   def self.search_results(search_request)
     data = search(search_request)
-    if search_request != ""
+    if search_request != ''
       data[:results].first(40)
     else
-      self.top_40_movies_by_rating
+      top_40_movies_by_rating
     end
-
   end
 
   def self.search(search_request)

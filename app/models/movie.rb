@@ -7,7 +7,6 @@ class Movie
               :vote_average,
               :movie_id
 
-
   def initialize(data, id)
     @title = data[:title]
     @genres_data = data[:genres]
