@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Movie do
   before :each do
     @data = MovieData.all_movie_att('685621')
-    @result = Movie.new(@data)
+    @result = Movie.new(@data, '685621')
   end
 
   it 'instance exist' do

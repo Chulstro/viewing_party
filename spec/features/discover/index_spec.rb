@@ -33,6 +33,7 @@ RSpec.describe "Discover Index Page" do
       end
 
       it "When I click the button to discover top rated movies, I am redirected to the movies index where I see the top 40 movies" do
+
         within "#find-top-rated-movies" do
           click_on "Find Top Rated Movies"
         end

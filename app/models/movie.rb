@@ -4,9 +4,11 @@ class Movie
               :runtime,
               :summary,
               :cast,
-              :vote_average
+              :vote_average,
+              :movie_id
 
-  def initialize(data)
+
+  def initialize(data, id)
     @title = data[:title]
     @genres_data = data[:genres]
     @runtime = data[:runtime]
@@ -14,6 +16,7 @@ class Movie
     @cast = data[:cast]
     @reviews_data = data[:reviews]
     @vote_average = data[:vote_average]
+    @movie_id = id
   end
 
   def first_10_cast
@@ -37,7 +40,7 @@ class Movie
   end
 
   def genres
-    genres_hash =[]
+    genres_hash = []
     @genres_data.each do |genre|
       genres_hash << Genre.new(genre)
     end

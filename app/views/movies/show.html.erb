@@ -1,4 +1,5 @@
 <h1> <%= @movie.title %> </h1>
+<h4><%= link_to "Create Viewing Party", "/viewing_party/new?movie_id=#{@movie.movie_id}" %></h4>
 
 <h2>Viewer Rating:</h2> <%= @movie.vote_average %><br>
 <h2>Movie Duration:</h2> <%= @movie.runtime %> minutes<br>
