@@ -1,0 +1,27 @@
+<h1> Viewing Party Details:</h1>
+
+<section id='viewing-party'>
+<%= form_tag "/viewing_party?movie_id=#{@movie.movie_id}", method: :post do %>
+<%= label_tag "Movie Title" %>
+<%= text_field_tag :title, @movie.title, disabled: true %>
+
+<%= label_tag "Duration of Party"%>
+<%= text_field_tag :duration, @movie.runtime, min: @movie.runtime %>
+
+<%= label_tag :date, "When" %>
+<%= date_field_tag :date %>
+
+<p>Friends</p>
+  <% if current_user.friends.empty? == true %>
+  <p>You currently have no friends</p>
+  <% else %>
+    <% current_user.friends.each do |friend| %>
+    <section id= "friend<%= friend.id %>">
+      <%= friend.name %><%= check_box_tag "attendee[]", friend.id %>
+    </section>
+  <% end %>
+  <% end %>
+  <br>
+<%= submit_tag "Create Viewing Party" %>
+<% end %>
+</section>
