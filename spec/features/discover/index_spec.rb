@@ -32,7 +32,8 @@ RSpec.describe "Discover Index Page" do
         end
       end
 
-      it "When I click the button to discover top rated movies, I see the top 40 movies" do
+      it "When I click the button to discover top rated movies, I am redirected to the movies index where I see the top 40 movies" do
+
         within "#find-top-rated-movies" do
           click_on "Find Top Rated Movies"
         end
@@ -48,17 +49,19 @@ RSpec.describe "Discover Index Page" do
 
       it "I see a text field with a 'Find Movies' button" do
         within "#find-movies" do
-          expect(page.has_field? "movie-title").to be_truthy
           expect(page).to have_button "Find Movies"
+          expect(page.has_field? :search).to be_truthy
         end
       end
 
-      it "I can search by movie title by filling in the text field and clicking button to find movies" do
+      it "When I fill in the text field with a movie title and click the find movies button, I am redirected to the movies index where I see the results for my search" do
         within "#find-movies" do
-          fill_in "movie-title", with: "The Last Airbender"
+          fill_in :search, with: "The Last Airbender"
           click_on "Find Movies"
         end
         expect(current_path).to eq('/movies')
+        expect(page).to have_content("The Last Airbender")
+        expect(page).to have_content("Vote Average: 4.7")
       end
     end
   end
