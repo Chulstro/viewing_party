@@ -1,11 +1,10 @@
 <h1>Welcome <%= @user.name %></h1>
 
 <section id="discover-movies">
-<%= button_to "Discover Movies", discover_index_path, method: :get %>
+<%= button_to "Discover Movies", discover_index_path, method: :get %><br>
 </section>
 
 <section id="friends">
-  <h2>Friends:</h2>
   Add Friend by Email
   <%= form_tag '/friends', method: :create do %>
     <%= label_tag :email %>
@@ -14,6 +13,7 @@
     <%= submit_tag "Add Friend" %>
   <% end %>
 
+  <h2>Friends:</h2>
   <% if @user.friends.empty? %>
     <p>You currently have no friends</p><br>
   <% else %>
