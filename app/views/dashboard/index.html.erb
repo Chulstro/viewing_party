@@ -5,7 +5,7 @@
 </section>
 
 <section id="friends">
-  Yo Friends
+  <h2>Friends:</h2>
   Add Friend by Email
   <%= form_tag '/friends', method: :create do %>
     <%= label_tag :email %>
@@ -15,25 +15,21 @@
   <% end %>
 
   <% if @user.friends.empty? %>
-    <p>You currently have no friends</p>
+    <p>You currently have no friends</p><br>
   <% else %>
     <% @user.friends.each do |friend| %>
-      <%= friend.name %>
+      <%= friend.name %><br>
     <% end %>
   <% end %>
 </section>
 
-<section id="viewing-parties">
-  Yo Partays
-</section>
-
 <section id="events">
-  <h2>Events</h2><br>
+  <h2>Events:</h2><br>
   <% @user.view_parties.each do |party| %>
-    Duration: <%= party.duration %>
-    Movie Title: <%= party.find_movie_title %>
-    Attendees: <% party.all_invited.each do |attendee| %>
-      <%= attendee.name %>
+    <h4>Movie Title: <%= party.find_movie_title %></h4><br>
+    Duration: <%= party.duration %><br>
+    Attendees: <% party.all_invited.each do |attendee| %><br>
+      <%= attendee.name %><br>
     <% end %>
   <% end %>
 </section>
